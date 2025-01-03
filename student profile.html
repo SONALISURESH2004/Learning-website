@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student and Alumni Profile</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #8e8ee0;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+      font-size: 2em;
+      color: #333;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .profile-button {
+      padding: 20px 40px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+      color: white;
+    }
+
+    .profile-button:hover {
+      transform: scale(1.05);
+    }
+
+    .profile-button:active {
+    transform: scale(1);
+    }
+
+    .profile-button:first-of-type {
+      background-color: #4caf50; /* Green for Student */
+    }
+
+    .profile-button:last-of-type {
+      background-color: #dc81ca; /* Blue for Alumni */
+    }
+
+    .profile-form {
+    width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f2c5ee;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    }
+
+    .profile-form h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #831b75;
+    }
+
+    .profile-form label {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #555;
+    }
+
+    .profile-form input,
+    .profile-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #6f5c5c;
+    border-radius: 5px;
+    font-size: 0.9em;
+    }
+
+    .profile-form textarea {
+    resize: vertical;
+    height: 60px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Select Profile Type</h1>
+    <div class="button-container">
+    <button class="profile-button" onclick="showForm('student')">Student</button>
+    <button class="profile-button" onclick="showForm('alumni')">Alumni</button>
+    </div>
+
+    <div id="studentForm" class="profile-form" style="display: none;">
+    <h2>Student Profile</h2>
+    <label for="studentName">Name:</label>
+    <input type="text" id="studentName" name="studentName" placeholder="Enter student name">
+
+    <label for="studentEmail">Email:</label>
+    <input type="email" id="studentEmail" name="studentEmail" placeholder="Enter student email">
+
+    <label for="studentProjects">Projects:</label>
+    <input type="text" id="studentProjects" name="studentProjects" placeholder="Enter student projects">
+
+    <label for="studentDescription"> Description:</label>
+    <textarea id="studentDescription" name="studentDescription" placeholder="Enter profile description"></textarea>
+
+    <label for="studentInterest"> Interest:</label>
+    <textarea id="studentInterest" name="studentInterest" placeholder="Enter profile Interest"></textarea>
+
+    <label for="studentSkills"> Skills:</label>
+    <textarea id="studentSkills" name="studentSkills" placeholder="Enter profile Skills"></textarea>
+
+    <label for="student"> Curriculars:</label>
+    <textarea id="studentCurriculars" name="studentCurriculars" placeholder="Enter profile Curriculars"></textarea>
+
+    <label for="student"> LanguagesKnown:</label>
+    <textarea id="studentKnownLanguages" name="studentKnownLanguages" placeholder="Enter profile KnownLnaguages"></textarea>
+
+    <label for="student"> Link:</label>
+    <textarea id="studentLinks" name="studentLinks" placeholder="Enter Links"></textarea>
+
+
+
+
+    </div>
+
+    <div id="alumniForm" class="profile-form" style="display: none;">
+    <h2>Alumni Profile</h2>
+    <label for="alumniName">Name:</label>
+    <input type="text" id="alumniName" name="alumniName" placeholder="Enter alumni name">
+
+    <label for="alumniEmail">Email:</label>
+    <input type="email" id="alumniEmail" name="alumniEmail" placeholder="Enter alumni email">
+
+    <label for="alumniProjects">Projects:</label>
+    <input type="text" id="alumniProjects" name="alumniProjects" placeholder="Enter alumni projects">
+
+    <label for="alumniDescription">Profile Description:</label>
+    <textarea id="alumniDescription" name="alumniDescription" placeholder="Enter profile description"></textarea>
+
+    <label for="alumniInternship">Profile Description:</label>
+    <textarea id="alumniInternship" name="alumniInternship" placeholder="Enter Internships"></textarea>
+
+    
+    <label for="alumniExperience">Profile Description:</label>
+    <textarea id="alumniExperience" name="alumniExperience" placeholder="Enter Experience"></textarea>
+
+    </div>
+    </div>
+
+    <script>
+    function showForm(profileType) {
+    
+    document.getElementById('studentForm').style.display = 'none';
+    document.getElementById('alumniForm').style.display = 'none';
+
+
+    if (profileType === 'student') {
+        document.getElementById('studentForm').style.display = 'block';
+    } else if (profileType === 'alumni') {
+        document.getElementById('alumniForm').style.display = 'block';
+    }
+    }
+</script>
+</body>
+</html>
