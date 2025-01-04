@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../CSS/student_profile.css">
+  <title>Student and Alumni Profile</title>
+
+</head>
+
+<body>
+  <div class="container">
+    <h1>Select Profile Type</h1>
+    <div class="button-container">
+      <button class="profile-button" onclick="showForm('student')">Student</button>
+      <button class="profile-button" onclick="showForm('alumni')">Alumni</button>
+    </div>
+
+    <div id="studentForm" class="profile-form" style="display: none;">
+      <h2>Student Profile</h2>
+      <label for="studentName">Name:</label>
+      <input type="text" id="studentName" name="studentName" placeholder="Enter student name">
+
+      <label for="studentEmail">Email:</label>
+      <input type="email" id="studentEmail" name="studentEmail" placeholder="Enter student email">
+
+      <label for="studentProjects">Projects:</label>
+      <input type="text" id="studentProjects" name="studentProjects" placeholder="Enter student projects">
+
+      <label for="studentDescription"> Description:</label>
+      <textarea id="studentDescription" name="studentDescription" placeholder="Enter profile description"></textarea>
+
+      <label for="studentInterest"> Interest:</label>
+      <textarea id="studentInterest" name="studentInterest" placeholder="Enter profile Interest"></textarea>
+
+      <label for="studentSkills"> Skills:</label>
+      <textarea id="studentSkills" name="studentSkills" placeholder="Enter profile Skills"></textarea>
+
+      <label for="student"> Curriculars:</label>
+      <textarea id="studentCurriculars" name="studentCurriculars" placeholder="Enter profile Curriculars"></textarea>
+
+      <label for="student"> LanguagesKnown:</label>
+      <textarea id="studentKnownLanguages" name="studentKnownLanguages"
+        placeholder="Enter profile KnownLnaguages"></textarea>
+
+      <label for="student"> Link:</label>
+      <textarea id="studentLinks" name="studentLinks" placeholder="Enter Links"></textarea>
+
+
+
+
+    </div>
+
+    <div id="alumniForm" class="profile-form" style="display: none;">
+      <h2>Alumni Profile</h2>
+      <label for="alumniName">Name:</label>
+      <input type="text" id="alumniName" name="alumniName" placeholder="Enter alumni name">
+
+      <label for="alumniEmail">Email:</label>
+      <input type="email" id="alumniEmail" name="alumniEmail" placeholder="Enter alumni email">
+
+      <label for="alumniProjects">Projects:</label>
+      <input type="text" id="alumniProjects" name="alumniProjects" placeholder="Enter alumni projects">
+
+      <label for="alumniDescription">Profile Description:</label>
+      <textarea id="alumniDescription" name="alumniDescription" placeholder="Enter profile description"></textarea>
+
+      <label for="alumniInternship">Profile Description:</label>
+      <textarea id="alumniInternship" name="alumniInternship" placeholder="Enter Internships"></textarea>
+
+
+      <label for="alumniExperience">Profile Description:</label>
+      <textarea id="alumniExperience" name="alumniExperience" placeholder="Enter Experience"></textarea>
+
+    </div>
+  </div>
+
+  <script>
+    function showForm(profileType) {
+
+      document.getElementById('studentForm').style.display = 'none';
+      document.getElementById('alumniForm').style.display = 'none';
+
+
+      if (profileType === 'student') {
+        document.getElementById('studentForm').style.display = 'block';
+      } else if (profileType === 'alumni') {
+        document.getElementById('alumniForm').style.display = 'block';
+      }
+    }
+  </script>
+</body>
+
+</html>
